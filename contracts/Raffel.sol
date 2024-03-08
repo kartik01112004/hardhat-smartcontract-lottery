@@ -15,6 +15,9 @@ contract Raffle {
     uint256 private immutable i_enteranceFee;
     address payable[] private s_players;
 
+    //events
+    event RaffleEnter(address indexed player);
+
     constructor(uint256 enteranceFee) {
         i_enteranceFee = enteranceFee;
     }
@@ -24,6 +27,8 @@ contract Raffle {
             revert Raffle__notEnoughETHEnterd(); //just for knowing that they enterd enough eth to participate
         }
         s_players.push(payable(msg.sender));
+        //we make events with opposite name enterRaffel changed to raffelenter for others to understand easily
+        emit RaffleEnter(msg.sender);
     }
 
     // function picRandomeWinner() {}
