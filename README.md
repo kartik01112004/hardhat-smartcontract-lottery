@@ -28,3 +28,5 @@ when we emit an event we have 2 types
    we can have 3 indexed parameters and its called a topic
 
 ## chanilink VRF and chainlink Keepers
+
+Requesting a random number is a 2 transaction process to insure the random number is pure random number and not tampered with
