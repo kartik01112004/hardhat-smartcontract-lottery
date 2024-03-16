@@ -28,7 +28,7 @@ when we emit an event we have 2 types
 2. non indexed : ar eabi incoded and needs abi to decode and use these
    we can have 3 indexed parameters and its called a topic
 
-## chanilink VRF and chainlink Keepers
+## chanilink VRF
 
 Requesting a random number is a 2 transaction process to insure the random number is pure random number and not tampered with
 
@@ -38,3 +38,14 @@ see documentation for understansding what does what
 ## Hardhat Shorthand
 
 It is an npm package that lets us use some short cut sand we dont need to write complete commands to run
+
+## chainlink Keepers now chanlink automation
+
+To trigger a something as per the time you can use chainlink automation contract!
+[documentation of chanilink automation](https://docs.chain.link/chainlink-automation/overview/getting-started)
+
+## enums
+
+enums stand for Enumerable. Enums are user-defined data types that restrict the variable to have only one of the predefined values.
+
+picup from 14:49:50
