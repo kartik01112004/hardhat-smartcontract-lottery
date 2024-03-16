@@ -1,4 +1,4 @@
-#Hardhat Lottery
+# Hardhat Lottery
 
 `"printWidth": 100`
 just changes how log a line can be beofre it changes to another line
@@ -11,6 +11,7 @@ An Event inhertiable member of a contract
 ETH is an EVM based blockchain so EVMs have logs
 
 <b>Logs</b>
+
 logs are the data stored by a matchine that represents what what happened at what time
 
 so EVMs store those logs which contains events
@@ -30,3 +31,10 @@ when we emit an event we have 2 types
 ## chanilink VRF and chainlink Keepers
 
 Requesting a random number is a 2 transaction process to insure the random number is pure random number and not tampered with
+
+see documentation for understansding what does what
+[documentation of chanilink VRF](https://docs.chain.link/vrf/v2/subscription/examples/get-a-random-number)
+
+## Hardhat Shorthand
+
+It is an npm package that lets us use some short cut sand we dont need to write complete commands to run
