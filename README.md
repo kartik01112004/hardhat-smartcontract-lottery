@@ -48,4 +48,4 @@ To trigger a something as per the time you can use chainlink automation contract
 
 enums stand for Enumerable. Enums are user-defined data types that restrict the variable to have only one of the predefined values.
 
-picup from 14:49:50
+### Pure functions
