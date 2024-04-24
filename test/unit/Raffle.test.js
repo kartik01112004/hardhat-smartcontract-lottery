@@ -1,4 +1,4 @@
-const { getNamedAccounts, deployments } = require("hardhat");
+const { getNamedAccounts, deployments, ethers } = require("hardhat");
 const { developmentChains } = require("../../helper-hardhat-config");
 
 !developmentChains.includes(network.name)
@@ -9,5 +9,6 @@ const { developmentChains } = require("../../helper-hardhat-config");
           beforeEach(async function () {
               const { deployer } = await getNamedAccounts();
               await deployments.fixture(["all"]);
+              raffle = await ethers.getContract("Raffle", deployer);
           });
       });
