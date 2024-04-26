@@ -49,3 +49,5 @@ To trigger a something as per the time you can use chainlink automation contract
 enums stand for Enumerable. Enums are user-defined data types that restrict the variable to have only one of the predefined values.
 
 ### Pure functions
+
+a function that doesn’t read or modify the variables of the state is called a pure function. It can only use local variables that are declared in the function and the arguments that are passed to the function to compute or return a value.
