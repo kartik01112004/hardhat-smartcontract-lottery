@@ -104,7 +104,24 @@ const { assert, expect } = require("chai");
                   const txResponce = await raffle.performUpkeep([]);
                   const txReceipt = await txResponce.wait(1);
                   const requestId = txReceipt.events[1].args.requestId;
-                  assert;
+                  const raffleState = await raffle.getRaffleState();
+                  assert(requestId.toNumber() > 0);
+                  assert(raffleState.toString() == "1");
+              });
+          });
+          describe("fulfillRandomWords", function () {
+              beforeEach(async () => {
+                  await raffle.enterRaffle({ value: raffleEnternceFee });
+                  await network.provider.send("evm_increaseTime", [interval.toNumber() + 1]);
+                  await network.provider.request({ method: "evm_mine", params: [] });
+              });
+              it("can only be called after performupkeep", async () => {
+                  await expect(
+                      vrfCoordinatorV2Mock.fulfillRandomWords(0, raffle.address)
+                  ).to.be.revertedWith("nonexistent request");
+                  await expect(
+                      vrfCoordinatorV2Mock.fulfillRandomWords(1, raffle.address)
+                  ).to.be.revertedWith("nonexistent request");
               });
           });
       });
